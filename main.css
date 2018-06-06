@@ -35,15 +35,19 @@ body {
 .bg-footer {
   background-image: url(img/bg-chain.png);
   background-position: inherit;
-  height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 350px; }
+  height: 350px;
+  margin-top: -330px; }
 
 .c-text-bold {
   font-size: 26px;
   line-height: 36px;
-  letter-spacing: -0.54px; }
+  letter-spacing: -0.54px;
+  font-weight: 700; }
+
+.c-padding {
+  margin-top: 177px; }
 
 .c-text-header, .c-text-header a, .c-text-header a:hover {
   font-family: "Lora", serif;
@@ -53,6 +57,21 @@ body {
   line-height: 30px;
   font-style: italic;
   font-weight: 700; }
+
+.input-group-append .btn {
+  z-index: 0; }
+
+.c-btn, .c-btn:hover {
+  background-color: #393939;
+  color: #fff;
+  font-size: 22px;
+  height: 50px;
+  line-height: 29px;
+  letter-spacing: -0.46px;
+  font-weight: 700;
+  font-style: italic;
+  border-color: #393939;
+  border-radius: 0rem; }
 
 .c-text-title {
   font-family: "Playfair Display", serif;
@@ -91,6 +110,9 @@ a, a:hover {
 
 .c-text-quote-1 {
   font-weight: 400; }
+
+.form-control {
+  border-radius: 0rem; }
 
 .btn.btn-primary,
 .btn.btn-primary:hover,
