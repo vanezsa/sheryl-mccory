@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700');
+
+$font-stack-1: 'Lora', serif;
+$font-stack-2: 'Playfair Display', serif;
+$clr-nav: #FFB84C;
+$clr-yellow-orange: #FF9900;
+$clr-text-body: #303030;
+$clr-grey: #979797;
+$clr-link: #315890;
+$clr-white: #fff;
+$clr-form-btn: #393939;
+$clr-title-text: #0F3189;
+$clr-text-btn: #303030;
+$clr-border-img: #FFFAF2;
+
+* {
+    box-sizing: border-box;
+}
+
+%text-shared {
+    font-size: 22px;
+    color: $clr-text-body;
+    font-family: $font-stack-1;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.46px;
+}
+
+body {
+    @extend %text-shared;
+    font-style: italic;
+    background-image: url('img/bg-gradient.png');
+    background-repeat: no-repeat;
+    position: relative;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
+}
+
+.bg-header {
+    background-image: url(img/header-bg.png);
+    background-position: inherit;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 570px;
+}
+
+.bg-footer {
+    background-image: url(img/bg-chain.png);
+    background-position: inherit;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 350px;
+}
+.c-text-bold {
+    @extend %text-shared;
+    font-size: 26px;
+    line-height: 36px;
+    letter-spacing: -0.54px;
+}
+
+%text-header {
+    font-family: $font-stack-1;
+    color: $clr-white;
+    font-size: 23px;
+    letter-spacing: -0.48px;
+    line-height: 30px;
+    font-style: italic;
+    font-weight: 700;
+
+}
+
+.c-text-header {
+    @extend %text-header;
+}
+
+.c-text-title {
+    font-family: $font-stack-2; 
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-style: normal;
+}
+.c-text-header a,  .c-text-header a:hover{
+    @extend %text-header;
+    color: $clr-yellow-orange!important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-family: $font-stack-1;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: -0.46px;
+    color: $clr-nav!important;
+    text-transform: uppercase;
+}
+
+a, a:hover { color: $clr-link;}
+
+%text-quote {
+    font-family: $font-stack-2;
+    font-size: 29px;
+    line-height: 38px;
+    letter-spacing: -0.6px;
+    font-weight: 700;
+}
+
+.c-toggler.navbar-toggler {
+    border-color: rgb(255,184,76);
+}
+.c-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,184,76, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.c-text-quote {@extend %text-quote;}
+.c-text-quote-1 {
+    @extend %text-quote;
+    font-weight: 400;
+}
+
+
+
+.btn.btn-primary,
+.btn.btn-primary:hover,
+.btn.btn-primary:active,
+.btn.btn-primary:visited,
+.btn.btn-primary:focus {
+    background-color: $clr-yellow-orange;
+    border-color: $clr-yellow-orange!important;
+    border-radius: 25px 0 0 25px; // top-left top-right bottom-right bottom-left. 
+    color: $clr-text-btn;
+    font-family: $font-stack-1;
+    font-weight: 700;
+    font-size: 22px;
+    height: 50px;
+    line-height: 29px;
+    letter-spacing: -0.46px;
+    white-space: pre-wrap;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+}
+
+%img-rotation {
+    -webkit-transform: rotate(-3deg);     
+    -moz-transform: rotate(-3deg);        
+    -o-transform: rotate(-3deg);          
+    -ms-transform: rotate(-3deg);         
+    transform: rotate(-3deg); 
+    box-shadow: -14px 0 24px 0 rgba(0, 0, 0, 0.25);
+}
+
+.c-img-shadow {box-shadow: -14px 0 24px 0 rgba(0, 0, 0, 0.25);}
+.container-relatives {
+    position: relative;
+    top: -290px;
+}
+
+.c-image-rotate-1 { @extend %img-rotation;}
+.c-image-rotate-2 { 
+    @extend %img-rotation;
+    -webkit-transform: rotate(3deg);     
+    -moz-transform: rotate(3deg);        
+    -o-transform: rotate(3deg);          
+    -ms-transform: rotate(3deg);         
+    transform: rotate(3deg); }
+
+.c {
+    opacity: 0.7;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.5);
+    border: solid 10px #fffaf2;
+}
