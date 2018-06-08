@@ -13,6 +13,7 @@ $clr-form-btn: #393939;
 $clr-title-text: #0F3189;
 $clr-text-btn: #303030;
 $clr-border-img: #FFFAF2;
+$clr-dot-slider: #303030;
 
 * { box-sizing: border-box;}
 
@@ -38,6 +39,14 @@ body {
     -o-background-size: cover;
     background-size: cover;
     min-height: 100%;
+}
+
+.gathering-realm-bg {
+    background-image: url('img/gathering-realm-bg.png');
+    background-position: inherit;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 559px;
 }
 
 .bg-header {
@@ -138,9 +147,10 @@ a, a:hover { color: $clr-link;}
 }
 
 .c-text-quote {@extend %text-quote;}
-.c-text-quote-1 {
+.c-text-quote-1, .blockquote-footer {
     @extend %text-quote;
     font-weight: 400;
+    color: $clr-text-body!important;
 }
 
 
@@ -189,6 +199,9 @@ a, a:hover { color: $clr-link;}
     top: -290px;
 }
 
+.c-margin-2 {margin-top: -290px;}
+
+
 .c-image-rotate-1 { @extend %img-rotation;}
 .c-image-rotate-2 { 
     @extend %img-rotation;
@@ -231,19 +244,31 @@ a, a:hover { color: $clr-link;}
     transform: rotate(-4deg); 
 }
 
-
+.owl-theme .owl-dots .owl-dot span {background: $clr-yellow-orange;}
+.owl-theme .owl-dots .owl-dot:hover span, .owl-theme .owl-dots .owl-dot.active span {background: $clr-dot-slider;}
+.c-padding-2 {padding-top: 10px;}
+.c-padding-3 {padding-top: 100px;}
+.c-padding-4 {padding-top: 50px;}
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199px) {
-
+    .c-padding-2 {padding-top: 0px;}
+    .c-padding-3, .c-padding-4 {padding-top: 10px;}
+    .c-margin {margin-top: -170px;}
 }
 
 @media (max-width: 991px) {
     .c-padding-1 { padding-top: 70px;}
     .c-txt-ctr {text-align: center!important;}
+    .c-margin {margin-top: -10px;}
+    .c-padding-0 {padding-top: 0px!important; margin-top: -20px;}
 }
 
 @media (max-width: 767px) {
+    .c-padding-5 {padding-top: 370px;}
+    .c-text-header {color: $clr-text-body;}
+    .c-padding-0 {padding-top: 50px!important; margin-top: 0px;}
+
 }
 
 @media (max-width: 576px) {
@@ -294,11 +319,11 @@ a, a:hover { color: $clr-link;}
 }
 
 @media screen and (max-height: 450px) {
-  .overlay {overflow-y: auto;}
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
+    .overlay {overflow-y: auto;}
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
 }
