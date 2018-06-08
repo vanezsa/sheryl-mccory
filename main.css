@@ -100,14 +100,15 @@ body {
 .c-text-header a, .c-text-header a:hover {
   color: #FF9900 !important; }
 
-.navbar-dark .navbar-nav .nav-link {
+.c-nav-a {
   font-family: "Lora", serif;
   font-size: 22px;
   font-weight: 700;
   line-height: 28px;
   letter-spacing: -0.46px;
   color: #FFB84C !important;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-style: normal; }
 
 a, a:hover {
   color: #315890; }
@@ -124,12 +125,12 @@ a, a:hover {
   font-weight: 400;
   color: #303030 !important; }
 
-.c-toggler.navbar-toggler {
-  border-color: #ffb84c; }
-
+/*.c-toggler.navbar-toggler {
+    border-color: rgb(255,184,76);
+}
 .c-toggler .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,184,76, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); }
-
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,184,76, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}*/
 .form-control {
   border-radius: 0rem; }
 
