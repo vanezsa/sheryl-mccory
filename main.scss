@@ -14,9 +14,7 @@ $clr-title-text: #0F3189;
 $clr-text-btn: #303030;
 $clr-border-img: #FFFAF2;
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box;}
 
 %text-shared {
     font-size: 22px;
@@ -67,7 +65,8 @@ body {
     font-weight: 700;
 }
 
-.c-padding {margin-top: 177px;}
+.c-padding, .c-padding-1 {padding-top: 177px;}
+.c-margin {margin-top: -233px;}
 
 %text-header {
     font-family: $font-stack-1;
@@ -77,7 +76,6 @@ body {
     line-height: 30px;
     font-style: italic;
     font-weight: 700;
-
 }
 
 .input-group-append .btn {z-index: 0;}
@@ -105,6 +103,14 @@ body {
     font-weight: 700;
     font-style: normal;
 }
+
+.c-text-title-1 {
+    font-family: $font-stack-1; 
+    font-size: 42px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -0.87px;
+}
 .c-text-header a,  .c-text-header a:hover{
     @extend %text-header;
     color: $clr-yellow-orange!important;
@@ -127,20 +133,22 @@ a, a:hover { color: $clr-link;}
     font-size: 29px;
     line-height: 38px;
     letter-spacing: -0.6px;
+    font-style: normal;
     font-weight: 700;
-}
-
-.c-toggler.navbar-toggler {
-    border-color: rgb(255,184,76);
-}
-.c-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,184,76, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .c-text-quote {@extend %text-quote;}
 .c-text-quote-1 {
     @extend %text-quote;
     font-weight: 400;
+}
+
+
+.c-toggler.navbar-toggler {
+    border-color: rgb(255,184,76);
+}
+.c-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,184,76, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
 .form-control {border-radius: 0rem;}
@@ -188,10 +196,109 @@ a, a:hover { color: $clr-link;}
     -moz-transform: rotate(3deg);        
     -o-transform: rotate(3deg);          
     -ms-transform: rotate(3deg);         
-    transform: rotate(3deg); }
+    transform: rotate(3deg); 
+}
 
-.c {
-    opacity: 0.7;
+%img-rotation-1 {
+    -webkit-transform: rotate(5deg);     
+    -moz-transform: rotate(5deg);        
+    -o-transform: rotate(5deg);          
+    -ms-transform: rotate(5deg);         
+    transform: rotate(5deg); 
+    opacity: 0.9;
     box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.5);
-    border: solid 10px #fffaf2;
+    border: solid 10px $clr-border-img;
+}
+.c-image-rotate-3 {
+    @extend %img-rotation-1;
+}
+
+.c-image-rotate-4 {
+    @extend %img-rotation-1;
+    -webkit-transform: rotate(1deg);     
+    -moz-transform: rotate(1deg);        
+    -o-transform: rotate(1deg);          
+    -ms-transform: rotate(1deg);         
+    transform: rotate(1deg); 
+}
+
+.c-image-rotate-5 {
+    @extend %img-rotation-1;
+    -webkit-transform: rotate(-4deg);     
+    -moz-transform: rotate(-4deg);        
+    -o-transform: rotate(-4deg);          
+    -ms-transform: rotate(-4deg);         
+    transform: rotate(-4deg); 
+}
+
+
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+    .c-padding-1 { padding-top: 70px;}
+    .c-txt-ctr {text-align: center!important;}
+}
+
+@media (max-width: 767px) {
+}
+
+@media (max-width: 576px) {
+
+}
+
+
+/******* MENU *******/
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
 }
